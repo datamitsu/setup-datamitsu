@@ -1,42 +1,78 @@
 # setup-datamitsu
 
 GitHub Action that installs the [datamitsu](https://github.com/datamitsu/datamitsu)
-CLI and runs it in CI.
+CLI, provisions the tools your repository's config declares, and runs datamitsu
+in CI — in a single step.
 
-> **This repository is auto-generated — do not edit by hand.**
-> The action is built and published automatically from
-> [`datamitsu/datamitsu`](https://github.com/datamitsu/datamitsu) (the
-> `packaging/action` package) on every datamitsu release. Files committed here
-> are overwritten on each publish. Open issues and pull requests in the
-> [main repository](https://github.com/datamitsu/datamitsu/issues).
-
-## Status
-
-🚧 **Not yet released.** The first published version will appear here
-automatically as an immutable tag (`vX.Y.Z`) matching the datamitsu CLI version
-it installs.
-
-## Usage (planned)
+## Usage
 
 ```yaml
 steps:
   - uses: actions/checkout@v4
-  - uses: datamitsu/setup-datamitsu@v0.1.5 # installs datamitsu 0.1.5 (hashes baked in) and runs `datamitsu lint`
+  - uses: datamitsu/setup-datamitsu@v0.1.5
 ```
 
-Each release tag pins one datamitsu version together with the SHA-256 hashes of
-its release binaries, so a pinned tag is fully reproducible and integrity is
-verified on download. Pin by full version or commit SHA (not a moving major tag)
-and let Dependabot keep it current.
+That installs datamitsu `0.1.5` and runs `datamitsu init` to provision the managed
+tools your config declares. By default it then runs `datamitsu lint` (override
+with `args`). The action carries no configuration of its own — it reads the
+datamitsu config already in your repository.
 
-### Inputs (planned)
+Run a different command, or only set up the CLI:
 
-| Input  | Default | Description                                                                          |
-| ------ | ------- | ------------------------------------------------------------------------------------ |
-| `args` | `lint`  | Arguments passed to `datamitsu`. An empty string installs and initializes only (runs nothing). |
+```yaml
+# Run an arbitrary datamitsu command instead of `lint`
+- uses: datamitsu/setup-datamitsu@v0.1.5
+  with:
+    args: "exec golangci-lint run ./..."
 
-The action carries no configuration of its own: it reads the datamitsu config
-already present in your repository.
+# Install + init only (put `datamitsu` on PATH, run nothing)
+- uses: datamitsu/setup-datamitsu@v0.1.5
+  with:
+    args: ""
+```
+
+## Versioning and integrity
+
+Each release tag pins **one** datamitsu version: `@v0.1.5` installs datamitsu
+`0.1.5`. The SHA-256 hashes of every release binary are baked into the tag (see
+[`hashes.ts`](hashes.ts)) and verified on download — an unverified or missing
+hash makes the action fail.
+
+Pin by full version (`@v0.1.5`) or commit SHA, **not** a moving major tag, and
+let [Dependabot](https://docs.github.com/code-security/dependabot) keep it
+current:
+
+```yaml
+# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+```
+
+## Inputs
+
+| Input  | Default | Description                                                                                 |
+| ------ | ------- | ------------------------------------------------------------------------------------------- |
+| `args` | `lint`  | Arguments passed to `datamitsu` after setup. An empty string installs and initializes only. |
+| `init` | `true`  | Run `datamitsu init` after install to provision managed tools.                              |
+
+## Outputs
+
+| Output    | Description                               |
+| --------- | ----------------------------------------- |
+| `version` | The datamitsu version that was installed. |
+
+## About this repository
+
+This repository is **auto-generated** from
+[`datamitsu/datamitsu`](https://github.com/datamitsu/datamitsu) (the
+`packaging/action` package) on every datamitsu release. Do not edit it by hand.
+Open issues and pull requests in the main repository.
+
+Full documentation: <https://datamitsu.com/docs/how-to/use-in-github-actions>
 
 ## License
 
