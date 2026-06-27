@@ -18515,31 +18515,31 @@ var require_tool_cache = /* @__PURE__ */ __commonJSMin(((exports) => {
 var import_exec = /* @__PURE__ */ __toESM(require_exec(), 1);
 var import_core = /* @__PURE__ */ __toESM(require_core(), 1);
 var import_tool_cache = /* @__PURE__ */ __toESM(require_tool_cache(), 1);
-const VERSION = "0.1.9";
+const VERSION = "0.1.10";
 const RELEASES = {
 	"linux_amd64": {
-		file: "datamitsu_0.1.9_linux_amd64.tar.gz",
-		sha256: "af39f887efad66213d9e6100fdf5fd7ba703f6722dc506c1bb3b67920da02ff7"
+		file: "datamitsu_0.1.10_linux_amd64.tar.gz",
+		sha256: "ca04dfb31f8f7268188274233ac8f95ae2ee0ecaacf53a892c8b960445d4b8af"
 	},
 	"linux_arm64": {
-		file: "datamitsu_0.1.9_linux_arm64.tar.gz",
-		sha256: "1e0f3e9fa2383d1d8107d01be690803da28a09a707ef7392fd3d964fb38d6d3b"
+		file: "datamitsu_0.1.10_linux_arm64.tar.gz",
+		sha256: "6775cc52fc4915141221e0d30cc1f416149be44a5cedb7af5cf82a80de7ff30a"
 	},
 	"darwin_amd64": {
-		file: "datamitsu_0.1.9_darwin_amd64.tar.gz",
-		sha256: "1adb661dc44a979f6dad3cc49f33c4f6402c1515a3cbec0afe6d182888580a75"
+		file: "datamitsu_0.1.10_darwin_amd64.tar.gz",
+		sha256: "4eef417d032550375bac2306368d60b7fc58b0efc69fab3d6d1c97c6bf384798"
 	},
 	"darwin_arm64": {
-		file: "datamitsu_0.1.9_darwin_arm64.tar.gz",
-		sha256: "7537ce97b93c8745d592cdc13f07bbab8c26ee464f649382059b4bbacd6b353f"
+		file: "datamitsu_0.1.10_darwin_arm64.tar.gz",
+		sha256: "9f226d2bae0f4f8c4c211d5c7c54056302950fb2d8d888090085c91ddc00e860"
 	},
 	"windows_amd64": {
-		file: "datamitsu_0.1.9_windows_amd64.zip",
-		sha256: "ffef2b3924543875a32f977a990e5ffd246bf96c91803f8d4452b2a1defd5c28"
+		file: "datamitsu_0.1.10_windows_amd64.zip",
+		sha256: "f30f3c390bf005ac7ea8745b78d48576e21fc35ece592c1a4762da9d824d7f46"
 	},
 	"windows_arm64": {
-		file: "datamitsu_0.1.9_windows_arm64.zip",
-		sha256: "4bd9900cbd502e134c2dc63844c7dfcb4bf98cafca67d953811ccfe53d4a7b25"
+		file: "datamitsu_0.1.10_windows_arm64.zip",
+		sha256: "45e0681bca24bebe3f3443fb91b3beba004b877524c293df8e548357635b10df"
 	}
 };
 //#endregion
