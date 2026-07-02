@@ -18515,31 +18515,31 @@ var require_tool_cache = /* @__PURE__ */ __commonJSMin(((exports) => {
 var import_exec = /* @__PURE__ */ __toESM(require_exec(), 1);
 var import_core = /* @__PURE__ */ __toESM(require_core(), 1);
 var import_tool_cache = /* @__PURE__ */ __toESM(require_tool_cache(), 1);
-const VERSION = "0.1.13";
+const VERSION = "0.1.14";
 const RELEASES = {
 	"linux_amd64": {
-		file: "datamitsu_0.1.13_linux_amd64.tar.gz",
-		sha256: "8f199d59b370fef0624e094841f1c97bb7ff930e5f30c3bfdd867928dac63963"
+		file: "datamitsu_0.1.14_linux_amd64.tar.gz",
+		sha256: "34fe7d92d6356e0c9ed9e32ab8d44476ecefc90c4e7dddd618c00accc8b3c25f"
 	},
 	"linux_arm64": {
-		file: "datamitsu_0.1.13_linux_arm64.tar.gz",
-		sha256: "c49edb859d21979ff18413fb3d28ca50418ee4deb7a41017ad8abf73e05bce3e"
+		file: "datamitsu_0.1.14_linux_arm64.tar.gz",
+		sha256: "6f4a11742f9882d26343ce04db16520bb5276696280e88ac7209d423187ca2e1"
 	},
 	"darwin_amd64": {
-		file: "datamitsu_0.1.13_darwin_amd64.tar.gz",
-		sha256: "02f862d06820ef42434ea161fb8fbfe0f40a3c86bccef31e6eb965d4113f8a30"
+		file: "datamitsu_0.1.14_darwin_amd64.tar.gz",
+		sha256: "6eac867ecacbe674038e09cc0fe5258677ec4d3e6d3f0f5a774b0cf1f1308e00"
 	},
 	"darwin_arm64": {
-		file: "datamitsu_0.1.13_darwin_arm64.tar.gz",
-		sha256: "d5b26b21855e9b8299efe2a90bbfb2357b80a9e834f4050497526df73b12fbd5"
+		file: "datamitsu_0.1.14_darwin_arm64.tar.gz",
+		sha256: "dae1d32251bbc4d3546a3fbde96f07f4e8f7fb9c532a0358d6e4d8cd84003274"
 	},
 	"windows_amd64": {
-		file: "datamitsu_0.1.13_windows_amd64.zip",
-		sha256: "3adeee2897f76492fab4aed66195c5b46471bc52bfb9fd2e66c084acf33086d3"
+		file: "datamitsu_0.1.14_windows_amd64.zip",
+		sha256: "4fd9a3bf8d30a0df759108aa30662bea02a23bdaeaf4e53f795ec337793811ce"
 	},
 	"windows_arm64": {
-		file: "datamitsu_0.1.13_windows_arm64.zip",
-		sha256: "fcf5c3df0448bc4643985adeff1a1391265eb64d3b3c2dbdbb6326dabbb47e92"
+		file: "datamitsu_0.1.14_windows_arm64.zip",
+		sha256: "8cd2fcb11a62fe4868e5c53f9e05f645aec1dc473930f21ebb6482402c2edd12"
 	}
 };
 //#endregion
