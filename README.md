@@ -9,10 +9,10 @@ in CI — in a single step.
 ```yaml
 steps:
   - uses: actions/checkout@v4
-  - uses: datamitsu/setup-datamitsu@v0.1.14
+  - uses: datamitsu/setup-datamitsu@v0.1.15
 ```
 
-That installs datamitsu `0.1.14` and runs `datamitsu init` to provision the managed
+That installs datamitsu `0.1.15` and runs `datamitsu init` to provision the managed
 tools your config declares. By default it then runs `datamitsu lint` (override
 with `args`). The action carries no configuration of its own — it reads the
 datamitsu config already in your repository.
@@ -21,24 +21,24 @@ Run a different command, or only set up the CLI:
 
 ```yaml
 # Run an arbitrary datamitsu command instead of `lint`
-- uses: datamitsu/setup-datamitsu@v0.1.14
+- uses: datamitsu/setup-datamitsu@v0.1.15
   with:
     args: "exec golangci-lint run ./..."
 
 # Install + init only (put `datamitsu` on PATH, run nothing)
-- uses: datamitsu/setup-datamitsu@v0.1.14
+- uses: datamitsu/setup-datamitsu@v0.1.15
   with:
     args: ""
 ```
 
 ## Versioning and integrity
 
-Each release tag pins **one** datamitsu version: `@v0.1.14` installs datamitsu
-`0.1.14`. The SHA-256 hashes of every release binary are baked into that tag
+Each release tag pins **one** datamitsu version: `@v0.1.15` installs datamitsu
+`0.1.15`. The SHA-256 hashes of every release binary are baked into that tag
 (inlined in the non-minified `dist/index.mjs`) and verified on download — an
 unverified or missing hash makes the action fail.
 
-Pin by full version (`@v0.1.14`) or commit SHA, **not** a moving major tag, and
+Pin by full version (`@v0.1.15`) or commit SHA, **not** a moving major tag, and
 let [Dependabot](https://docs.github.com/code-security/dependabot) keep it
 current:
 
